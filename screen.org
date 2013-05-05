@@ -1,0 +1,47 @@
+#+TITLE: screen and emacs
+** screen 和 emacs
+ screen 是 linux 一个工具，用来管理远程连是一个神器哦！如果screen 遇
+ 到 emacs,这样本地编辑，远程调试就不怕了！screen 保存当时的连接
+*** screen 安装
+#+BEGIN_SRC bash
+apt-get install screen
+#+END_SRC
+*** emacs install
+you could google emacs install when you use ubuntu.
+*** screen configure 
+how to configure the screen? if we just use the screen,we could not
+write any configure file.but,we have to use emacs(because we are
+emacser fan),so we need write a configure file.
+there is a configure file named .screenrc
+
+#+BEGIN_SRC bash
+
+setenv LC_CTYPE en_US.UTF-8
+defflow off
+defutf8 on
+
+# start no display welcome message
+startup_message off
+
+# screen buffer 1024
+defscrollback 10240
+
+#the last line display the current time
+
+hardstatus on
+hardstatus alwayslastline
+
+# caption always
+hardstatus string "%{.bW}%-w%{= KG}%n %t{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d %c:%s"
+
+
+escape  ^L^L
+
+#+END_SRC
+
+
+if we use the configure file that is above.we must remember the C-l
+is into the command line mode.and the stream flow is off.
+
+then we could use the screen and emacs,:)
+
