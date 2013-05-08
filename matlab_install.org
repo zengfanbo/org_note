@@ -6,7 +6,7 @@ matlab 安装文章，本机使用ubuntu12.10 64位系统，本来下的是matla
 空间。无语了，算了吧！换一个，在verycd上找了一个unix版本，r2010a！整整
 4G，算了吧～将就了。
 安装代码
-#+SRC_CODE: bash
+#+SRC_CODE: shell
 sudo -s
 mount -o loop [source-path] [destination-path]
 cd /
