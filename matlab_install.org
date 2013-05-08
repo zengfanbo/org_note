@@ -1,0 +1,17 @@
+#+TITLE: matlab install log
+#+AUTHOR:zengfanbo2009@gmail.com
+matlab 安装文章，本机使用ubuntu12.10 64位系统，本来下的是matlab 7，考
+虑的是matlab 7 的精简，很符合我这个设计需求。但是天公不做美，很不幸的
+事情发生了，安装的时候说我/tmp目录下空间不足，可是哥看了一下 整整有9G
+空间。无语了，算了吧！换一个，在verycd上找了一个unix版本，r2010a！整整
+4G，算了吧～将就了。
+安装代码
+#+SRC_CODE: bash
+sudo -s
+mount -o loop [source-path] [destination-path]
+cd /
+./[destination-path]/install
+#+END_CODE
+接下来的安装基本和windows一致，没什么大的区别！但是最后报错了，没有
+libxp.so这个东西，好像是X11的动态连接库。但是没装上好像也暂时没什么事
+情！
